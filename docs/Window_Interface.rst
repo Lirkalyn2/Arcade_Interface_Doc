@@ -4,6 +4,7 @@ Window_Interface
 
 .. contents:: Table of Contents
 
+
 Actions on window (Actions linked to graphical libs)
 ====================================================
 
@@ -109,6 +110,7 @@ Is_Elem_Window(size_t pos_x, size_t pos_y, char sprite)
 
 Return true if the given sprite is in the given position in the map, otherwise return false.
 
+
 Actions on forbidden_chars
 ==========================
 
@@ -142,10 +144,17 @@ Remove_Forbidden_Chars(std::string forbidden_char)
 
 Remove the given element (given in the form of a string) from the list of forbidden_char.
 
+
 Free
 ====
 
 Free_All()
 ----------
 
-Free all memory used (if any) by this class
+Free all memory used (if any) by this class.
+
+
+Variables
+=========
+
+W.I.P

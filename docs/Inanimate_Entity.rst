@@ -1,5 +1,14 @@
-
+****************
 Inanimate_Entity
-----------------
+****************
 
-Some text here :
+Inherit Entity
+
+.. contents:: Table of Contents
+
+
+W.I.P
+=====
+
+W.I.P.A
+-------
