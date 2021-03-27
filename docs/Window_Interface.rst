@@ -5,19 +5,14 @@ Window_Interface
 .. contents:: Table of Contents
 
 
-****************************************************
-Actions on window (Actions linked to graphical libs)
-****************************************************
+*******************************************************
+1. Actions on window (Actions linked to graphical libs)
+*******************************************************
 
-Initialize_Window()
-===================
+Initialize_Window(int opt = 0, size_t limit_x = 0, size_t limit_y = 0)
+======================================================================
 
-Initialize the window with default values.
-
-Initialize_Window(int opt)
-==========================
-
-Initialize the window according to the choosen option.
+Initialize the window according to the choosen option (opt), if opt is not given it's value is 0 and the window is created with the default apparence and given lenght (x) and height (y) if themselves are not 0.
 
 option
 ------
@@ -29,10 +24,10 @@ Display_Window()
 
 Display the window on screen.
 
-Get_Input_Window()
-==================
+Get_Input_Window() const
+========================
 
-Return the input gottent by the graphical library in the form of number, accordingly to the map below.
+Return the input gottent by the graphical library in the form of a number, accordingly to the map below.
 
 input map
 ---------
@@ -40,27 +35,30 @@ input map
 W.I.P
 
 
-**************
-Actions on map
-**************
+*****************
+#. Actions on map
+*****************
 
-Initialize_Map(char \*fd, size_t limit_x, size_t limit_y)
-=========================================================
+Initialize_Map(char \*fd, size_t limit_x = 0, size_t limit_y = 0)
+=================================================================
 
 Initialize the map with an alreday open file descirptor, the limit in lenght (x), and the limit in height (y).
+The default value for x and y if they a not given is 0.
 
-Initialize_Map(char \**map, size_t limit_x, size_t limit_y)
-===========================================================
+Initialize_Map(char \**map, size_t limit_x = 0, size_t limit_y = 0)
+===================================================================
 
-Initialize the map with bi-dimensional array of chat, the limit in lenght (x), and the limit in height (y).
+Initialize the map with bi-dimensional array of char, the limit in lenght (x), and the limit in height (y).
+The default value for x and y if they a not given is 0.
 
 Called Window but act on map
 ----------------------------
 
-Add_Elem_Window(size_t pos_x, size_t pos_y, char sprite)
-========================================================
+Add_Elem_Window(char sprite, size_t pos_x = 0, size_t pos_y = 0)
+================================================================
 
-Add the given sprite to the given location in the map, which result in it's addition on the screen when displaying.
+Add the given sprite to the given location in the map, which result in it's addition on the screen when displaying if the position is between the limit of the window.
+The default value for x and y if they a not given is 0.
 
 Add_Elem_Window(Inanimate_Entity &Inanimate_Entity)
 ===================================================
@@ -113,9 +111,9 @@ Is_Elem_Window(size_t pos_x, size_t pos_y, char sprite)
 Return true if the given sprite is in the given position in the map, otherwise return false.
 
 
-**************************
-Actions on forbidden_chars
-**************************
+*****************************
+#. Actions on forbidden_chars
+*****************************
 
 Add_Forbidden_Chars(char forbidden_char)
 ========================================
@@ -147,10 +145,15 @@ Remove_Forbidden_Chars(std::string forbidden_char)
 
 Remove the given element (given in the form of a string) from the list of forbidden_char.
 
+std::string Get_Forbidden_Chars() const
+=======================================
 
-****
-Free
-****
+Return the Forbidden Chars in the form of a string;
+
+
+*******
+#. Free
+*******
 
 Free_All()
 ==========
@@ -158,8 +161,31 @@ Free_All()
 Free all memory used (if any) by this class.
 
 
-*********
-Variables
-*********
+************
+#. Variables
+************
 
-W.I.P
+char \*\*Map
+============
+
+Char \*\* containing the map of the game.
+
+size_t Limit_X
+==============
+
+Limit in lenght (x) of the map.
+
+size_t Limit_Y
+==============
+
+Limit in heigœ (y) of the map.
+
+int Window_Opt
+==============
+
+Option use for creating the window
+
+std::string Forbidden_Chars
+===========================
+
+The string who contain the forbidden chars.
