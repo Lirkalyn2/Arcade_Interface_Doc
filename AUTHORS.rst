@@ -1,4 +1,0 @@
-Authors
--------
-
-* Lirkalyn (Adrien Moreau)
