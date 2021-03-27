@@ -5,9 +5,9 @@ Entity
 .. contents:: Table of Contents
 
 
-******************
-Actions on Sprites
-******************
+*********************
+1. Actions on Sprites
+*********************
 
 Sprite_Setter()
 ===============
@@ -25,9 +25,9 @@ Sprite_Setter(std::string sprite)
 Set the sprite to the given value (here a std::string).
 
 
-*******************
-Actions on Position
-*******************
+**********************
+2. Actions on Position
+**********************
 
 Pos_Setter(size_t x = 0, size_t y = 0)
 ======================================
@@ -45,9 +45,9 @@ Pos_Y_Getter() const
 Get the value of the y component of the position.
 
 
-***************
-Actions on Size
-***************
+******************
+3. Actions on Size
+******************
 
 Length_Height_Setter(size_t Length = 0, size_t Height = 0)
 ==========================================================
@@ -75,9 +75,9 @@ Height_Getter() const
 Get the Height of the entity's sprite(s).
 
 
-****
-Free
-****
+*******
+4. Free
+*******
 
 Free_All()
 ==========
@@ -85,9 +85,9 @@ Free_All()
 Free all memory used (if any) by this class
 
 
-*********
-Variables
-*********
+************
+5. Variables
+************
 
 size_t Pos_X
 ============

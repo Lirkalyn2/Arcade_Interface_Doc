@@ -36,7 +36,7 @@ W.I.P
 
 
 *****************
-#. Actions on map
+2. Actions on map
 *****************
 
 Initialize_Map(char \*fd, size_t limit_x = 0, size_t limit_y = 0)
@@ -112,7 +112,7 @@ Return true if the given sprite is in the given position in the map, otherwise r
 
 
 *****************************
-#. Actions on forbidden_chars
+3. Actions on forbidden_chars
 *****************************
 
 Add_Forbidden_Chars(char forbidden_char)
@@ -152,7 +152,7 @@ Return the Forbidden Chars in the form of a string;
 
 
 *******
-#. Free
+4. Free
 *******
 
 Free_All()
@@ -162,7 +162,7 @@ Free all memory used (if any) by this class.
 
 
 ************
-#. Variables
+5. Variables
 ************
 
 char \*\*Map

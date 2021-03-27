@@ -7,9 +7,9 @@ Inherit Entity
 .. contents:: Table of Contents
 
 
-******************
-Actions on Sprites
-******************
+*********************
+1. Actions on Sprites
+*********************
 
 Sprite_Animation()
 ==================
@@ -17,9 +17,9 @@ Sprite_Animation()
 Incrimante the Animation_Count to change the sprite.
 
 
-*********
-Variables
-*********
+************
+2. Variables
+************
 
 Animation_Count
 ===============
