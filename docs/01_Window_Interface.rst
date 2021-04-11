@@ -4,13 +4,17 @@ Window_Interface
 
 .. contents:: Table of Contents
 
+******************************************************************
+(G) Means that the function is different for each graphic library.
+******************************************************************
+
 
 *******************************************************
 1. Actions on window (Actions linked to graphical libs)
 *******************************************************
 
-bool Initialize_Window(int opt = 0)
-===================================
+bool Initialize_Window(int opt = 0) (G)
+=======================================
 
 Initialize the window according to the choosen option (opt), if opt is not given it's value is 0 and the window is created with the default values.
 
@@ -24,13 +28,13 @@ option
     1: is for the games, you can go up to 42 characters per lines and 24 lines. the window is 1280x720. one character will have the following dimensions, lenght = 30 Px and height = 30 Px.
     2: is for the games, you can go up to 24 characters per lines and 16 lines. the window is 720x480. one character will have the following dimensions, lenght = 30 Px and height = 30 Px.
 
-void Display_Window()
-=====================
+void Display_Window() (G)
+=========================
 
 Display the window on screen.
 
-int Get_Input_Window() const
-============================
+int Get_Input_Window() const (G)
+================================
 
 Return the input gottent by the graphical library in the form of a number, accordingly to the map below.
 
@@ -89,10 +93,15 @@ input map
     F8 = 49;
     Enter = 50;
 
-void Stop_Window()
-==================
+void Stop_Window() (G)
+======================
 
 Stop and close the Window.
+
+bool Sprite_Info_Get_n_Set(std::vector<Sprite_Info_t> sprite) (G)
+=================================================================
+
+Get the information about the sprite and put them in the class variable Sprite_Inf.
 
 
 *****************
@@ -284,8 +293,8 @@ Return the Forbidden Chars in the form of a string;
 4. Free
 *******
 
-Free_All()
-==========
+Free_All() (G)
+==============
 
 Free all memory used (if any) by this class.
 
@@ -334,8 +343,8 @@ std::vector<Sprite_Info_t> Sprite_Inf
 
 Vector of a structure who contains all the informations needed to draw a sprite on screen.
 
-Sprite_Info_t
-=============
+Sprite_Info_t (G)
+=================
 
 char c
 ------
@@ -347,6 +356,22 @@ int stage
 
 the stage to know when to draw a sprite and in which category it is.
 
+    -1: Only one, and only for a font file to display text.
     0: Sprite who never moves, optimisation possible on them.
     1: Sprite who aren't animated and can't move.
     2: Sprite who moves and are animated.
+
+std::string img
+---------------
+
+Path toward the image for the sprite.
+
+int lenght
+----------
+
+Lenght of the sprite (should be 30 Px but can be more).
+
+int height
+----------
+
+Height of the sprite (should be 30 Px but can be more).
