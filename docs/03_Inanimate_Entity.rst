@@ -6,9 +6,9 @@ Inherit Entity
 
 .. contents:: Table of Contents
 
-****************************************************************************************
-Only use by the Launcher. Same code for all graphic library. Same explications a Entity.
-****************************************************************************************
+*****************************************************************************************
+Only use by the Launcher. Same code for all graphic library. Same explications as Entity.
+*****************************************************************************************
 
 
 *********************
